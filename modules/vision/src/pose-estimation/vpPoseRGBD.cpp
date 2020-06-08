@@ -182,7 +182,7 @@ void estimatePlaneEquationSVD(const std::vector<double> &point_cloud_face,
   tukey.MEstimator(vpRobust::TUKEY, residues, weights);
 
   // Update final centroid
-  centroid.resize(3, false);
+  centroid.resize(3, true);
   double total_w = 0.0;
 
   for (unsigned int i = 0; i < nPoints; i++) {
